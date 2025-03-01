@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; }
+        .container { max-width: 500px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: auto; }
+        h1 { text-align: center; color: #333; }
+        label { font-weight: bold; }
+        input, select { width: 100%; padding: 8px; margin: 5px 0 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 100%; padding: 10px; background-color: #28a745; border: none; color: white; font-size: 16px; cursor: pointer; border-radius: 5px; }
+        button:hover { background-color: #218838; }
+        .result, .error { margin-top: 20px; text-align: center; font-size: 18px; font-weight: bold; color: #333; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Car Price Prediction</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if predicted_price %}
+        <div class="result">Predicted Price: ${{ predicted_price }}</div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">Error: {{ error }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>
