@@ -2,15 +2,22 @@
 
 Table of Contents
 1.	Introduction
-1.1 Background
-1.2 Problem Statement
-1.3 Objectives
-1.4 Use Cases and Target Audience
-1.5 Methodology and Pipeline
+
+   1.1 Background
+
+   1.2 Problem Statement
+
+   1.3 Objectives
+
+   1.4 Use Cases and Target Audience
+
+   1.5 Methodology and Pipeline
 
 
 # 1. Introduction
+
 1.1 Background
+
 The automotive industry is a dynamic market where used car pricing plays a crucial role in sales, financing, and insurance evaluations. Pricing a used car accurately is a challenging problem due to the influence of multiple factors such as mileage, age, engine performance, accidents, transmission type, and brand reputation. Traditional valuation methods rely on historical sales trends and expert knowledge, but they often fail to capture the intricate relationships between different variables. Manual pricing often leads to inefficiencies, underpricing, or overpricing. Machine Learning (ML) offers a data-driven solution by predicting prices based on historical sales trends.
 
 This project aims to develop a machine learning model to predict the price of a used car based on its features. The project includes data preprocessing, feature engineering, exploratory data analysis (EDA), model selection with hyperparameter tuning, and deployment using Django. By automating price estimation, the model provides insights for dealerships, individual buyers, and financial institutions
